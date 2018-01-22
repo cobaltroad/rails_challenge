@@ -5,13 +5,14 @@ $(function() {
     },
     disconnected: function() {},
     received: function(data) {
-      $('#efin').text(data.body)
+      console.log("RECEIVED", data);
+      $('#efin').text(data.id_number)
     }
   });
   $( "form" ).on( "submit", function( e ) {
     e.preventDefault();
     var data = {};
-    $( this ).serializeArray().map(function(x){data[x.name] = x.value;}); 
+    $( this ).serializeArray().map(function(x){data[x.name] = x.value;});
     App.efin.send(data)
   });
 })

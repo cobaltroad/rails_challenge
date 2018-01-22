@@ -1,12 +1,11 @@
 require 'securerandom'
 class EfinChannel < ApplicationCable::Channel
-  def subscribed
-    stream_from "#{params[:channel]}"
+  def follow
+    stream_from "efin"
   end
 
   def receive(data)
-    puts "RECEIVED FROM USER #{data}"
-    GetEfinJob.perform_now(data)
+    GetEfinJob.perform_later(data)
   end
 
   def unsubscribed

@@ -11,7 +11,7 @@ class EfinService
     def efin(options)
       post_options = {
         body: {
-          household: options[:household_size],
+          household: options[:household],
           income: options[:income]
         }.to_json,
         headers: { 'Content-Type' => 'application/json' }
