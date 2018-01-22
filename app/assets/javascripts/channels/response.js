@@ -3,8 +3,9 @@ $(function() {
     connected: function() {
       console.log("response connected")
     },
+    disconnected: function() {},
     received: function(data) {
-      console.log("RECEIVED", data);
+      console.log("response received", data);
       $('#efin').text(data.id_number)
     }
   });
