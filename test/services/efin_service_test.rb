@@ -8,7 +8,7 @@ class EfinServiceTest < ActiveSupport::TestCase
   end
 
   test "the service posts valid data" do
-    efin = EfinService.efin(household_size: 1, income: 20000)
+    efin = EfinService.efin(household: 1, income: 20000)
     puts "RESPONSE #{efin.inspect}"
   end
 end
