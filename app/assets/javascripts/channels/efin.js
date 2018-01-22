@@ -1,13 +1,9 @@
 $(function() {
   App.efin = App.cable.subscriptions.create("EfinChannel", {
     connected: function() {
-      console.log('connected')
+      console.log('efin connected')
     },
     disconnected: function() {},
-    received: function(data) {
-      console.log("RECEIVED", data);
-      $('#efin').text(data.id_number)
-    }
   });
   $( "form" ).on( "submit", function( e ) {
     e.preventDefault();

@@ -1,6 +1,6 @@
 require 'securerandom'
 class EfinChannel < ApplicationCable::Channel
-  def follow
+  def subscribed
     stream_from "efin"
   end
 
