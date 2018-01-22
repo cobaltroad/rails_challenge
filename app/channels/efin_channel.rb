@@ -5,7 +5,8 @@ class EfinChannel < ApplicationCable::Channel
   end
 
   def receive(data)
-    puts "DATA #{data}"
+    puts "RECEIVED FROM USER #{data}"
+    GetEfinJob.perform_now(data)
   end
 
   def unsubscribed

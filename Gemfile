@@ -8,6 +8,7 @@ end
 gem 'httparty'
 gem 'nokogiri'
 gem 'resque'
+gem 'foreman'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.4'
